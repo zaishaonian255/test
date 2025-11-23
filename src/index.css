@@ -86,6 +86,34 @@ section + section {
   border: 1px solid #e2e8f0;
 }
 
+.card-with-image {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+
+.card-media {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card-with-image:hover .card-media img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 1.25rem;
+}
+
 .card h3 {
   margin: 0 0 0.5rem;
 }
@@ -113,6 +141,104 @@ section + section {
 
 .error {
   color: #dc2626;
+}
+
+.success {
+  color: #0f9d58;
+}
+
+.section-subtitle {
+  margin: 0.25rem 0 1rem;
+  color: #64748b;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.filter-bar select,
+.story-form input,
+.story-form select,
+.story-form textarea {
+  border: 1px solid #cbd5f5;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #f8fafc;
+}
+
+.story-form {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(249, 115, 22, 0.15);
+  margin-bottom: 2rem;
+}
+
+.story-form .form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.story-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  color: #475569;
+  flex: 1;
+}
+
+.story-form textarea {
+  resize: vertical;
+}
+
+.story-form button {
+  background: linear-gradient(120deg, #fb923c, #f97316);
+  border: none;
+  color: white;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.story-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.story-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.story-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.story-meta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  color: #475569;
+  margin-bottom: 0.5rem;
 }
 
 @media (prefers-color-scheme: light) {
